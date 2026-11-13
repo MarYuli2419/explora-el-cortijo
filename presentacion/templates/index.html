@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explora El Cortijo | Bogotá</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>✦ Explora El Cortijo</h2>
+            <a href="#inicio">Inicio</a>
+            <a href="#explorar">Explorar</a>
+            <a href="#nosotros">Nosotros</a>
+        </nav>
+    </header>
+
+    <main id="inicio">
+        <section>
+            <p>DESCUBRE TU TERRITORIO</p>
+            <h1>Explora El Cortijo</h1>
+            <p>Conoce los lugares, servicios y espacios
+            que hacen especial a nuestro barrio en Bogotá.</p>
+            <a href="#explorar">Comenzar a explorar</a>
+        </section>
+        <section id="explorar">
+            <h2>Descubre tu barrio</h2>
+            <p>Explora El Cortijo y sus alrededores en el mapa.</p>
+            <div id="mapa"></div>
+        </section>
+
+        
+
+        <section id="nosotros">
+            <h2>Sobre el proyecto</h2>
+            <p>Una plataforma para conocer El Cortijo.</p>
+        </section>
+    </main>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='js/mapa.js') }}"></script>
+</body>
+</html>
