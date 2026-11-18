@@ -11,6 +11,7 @@ class BaseDatos:
     def conectar(self):
         return sqlite3.connect(self.ruta)
 
+    
     def crear_tablas(self):
         with self.conectar() as conexion:
             conexion.execute("""
@@ -18,28 +19,47 @@ class BaseDatos:
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     nombre TEXT NOT NULL,
                     categoria TEXT NOT NULL,
-                    latitud REAL NOT NULL,
-                    longitud REAL NOT NULL
+                    latitud REAL,
+                    longitud REAL,
+                    zona TEXT,
+                    descripcion TEXT,
+                    plan TEXT,
+                    imagen TEXT,
+                    tipo_imagen TEXT
                 )
             """)
+
+    
     def guardar_lugar(self, lugar):
-         with self.conectar() as conexion:
-                conexion.execute("""
-            INSERT INTO lugares
-            (nombre, categoria, latitud, longitud)
-            VALUES (?, ?, ?, ?)
-        """, (
-            lugar.nombre,
-            lugar.categoria,
-            lugar.latitud,
-            lugar.longitud
-        ))
+        with self.conectar() as conexion:
+            conexion.execute("""
+                INSERT INTO lugares
+                (nombre, categoria, latitud, longitud,
+                 zona, descripcion, plan, imagen, tipo_imagen)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """, (
+                lugar.nombre,
+                lugar.categoria,
+                lugar.latitud,
+                lugar.longitud,
+                lugar.zona,
+                lugar.descripcion,
+                lugar.plan,
+                lugar.imagen,
+                lugar.tipo_imagen
+            ))
+
                 
+   
     def obtener_lugares(self):
         with self.conectar() as conexion:
             cursor = conexion.execute("""
-                SELECT id, nombre, categoria, latitud, longitud
+                SELECT id, nombre, categoria,
+                       latitud, longitud, zona,
+                       descripcion, plan, imagen,
+                       tipo_imagen
                 FROM lugares
             """)
             return cursor.fetchall()
+
 
