@@ -1,0 +1,8 @@
+/* Elementos decorativos del inicio */
+.hero-visual{position:relative;min-height:440px;display:grid;place-items:center}
+.orbita{position:absolute;border:1px solid #5ce4c235;border-radius:50%;transform:rotate(-23deg)}
+.orbita-1{width:340px;height:340px}.orbita-2{width:455px;height:455px;border-style:dashed}
+.centro-pin{display:grid;place-items:center;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#64f0d0,#128a88);color:#08333c;font-size:115px;box-shadow:0 0 100px #55e9c144;z-index:1}
+.tarjeta-flotante{position:absolute;left:2%;bottom:15%;z-index:2;display:flex;align-items:center;gap:12px;background:#fff;color:#183441;border-radius:13px;padding:17px 21px;box-shadow:0 20px 60px #0004}
+.tarjeta-flotante span{display:flex;flex-direction:column;gap:4px}.tarjeta-flotante small{color:#738c95}.coordenadas{position:absolute;top:9%;right:0;color:#82acb8;font-size:12px;letter-spacing:2px}
+@media(max-width:900px){.hero-visual{display:none}}

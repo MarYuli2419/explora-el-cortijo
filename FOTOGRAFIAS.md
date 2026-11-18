@@ -1,0 +1,1 @@
+Fotografías suministradas en la conversación para el proyecto académico. Las capturas procedentes de Google Maps pueden estar sujetas a derechos de terceros; revisar permisos y atribuciones antes de publicar la web. La ubicación de BuffAlas no está confirmada y por ello no se coloca un marcador preciso.
