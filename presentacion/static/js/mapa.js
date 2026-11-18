@@ -5,15 +5,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     attribution: "&copy; OpenStreetMap contributors", maxZoom: 19
   }).addTo(mapa);
   const detalle = document.getElementById("detalle-lugar");
-  const tituloDetalle = document.getElementById("detalle-titulo");
-  const textoDetalle = document.getElementById("detalle-texto");
-  const zonaDetalle = document.getElementById("detalle-zona");
-  const avisoMapa = document.getElementById("aviso-mapa");
+  const [tituloDetalle, textoDetalle] = ["detalle-titulo", "detalle-texto"].map(id => document.getElementById(id));
+  const [zonaDetalle, avisoMapa] = ["detalle-zona", "aviso-mapa"].map(id => document.getElementById(id));
   const marcadores = new Map();
-  const buscar = document.getElementById("buscar");
-  const categoria = document.getElementById("categoria");
-  const lista = document.getElementById("lista-lugares");
-  const contador = document.getElementById("contador");
+  const [buscar, categoria, lista, contador] =
+  ["buscar", "categoria", "lista-lugares", "contador"].map(id => document.getElementById(id));
   let lugares = [];
   const normalizar = valor => String(valor || "").normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -41,8 +37,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const zona = document.createElement("span"); zona.className = "zone";
       zona.textContent = `📍 ${l.zona}`;
       const foto = document.createElement("img"); foto.className = "place-photo";
-      foto.src = "/static/" + l.imagen; foto.alt = l.tipo_imagen + " de " + l.nombre;
-      foto.loading = "lazy";
+      foto.src = "/static/" + l.imagen; foto.alt = l.tipo_imagen + " de " + l.nombre; foto.loading = "lazy";
       const pie = document.createElement("small"); pie.className = "photo-credit";
       pie.textContent = l.tipo_imagen;
       const descripcion = document.createElement("p"); descripcion.textContent = l.descripcion;
