@@ -155,3 +155,56 @@ un navegador web.
 
 URL:
 https://explora-el-cortijo.onrender.com/
+
+
+### 7. Requisitos no funcionales
+
+#### RNF01 - Usabilidad
+La aplicación debe presentar una interfaz
+clara, intuitiva y fácil de utilizar.
+
+#### RNF02 - Compatibilidad
+La aplicación debe funcionar en navegadores
+modernos y adaptarse a dispositivos móviles.
+
+#### RNF03 - Disponibilidad
+La aplicación debe estar publicada en
+internet y permitir el acceso mediante
+una dirección web.
+
+La disponibilidad puede depender del
+servicio de alojamiento utilizado.
+
+#### RNF04 - Mantenibilidad
+El código debe estar organizado en
+módulos que faciliten su comprensión,
+mantenimiento y actualización.
+
+#### RNF05 - Rendimiento
+Las búsquedas y los filtros deben
+responder de manera adecuada a las
+interacciones del usuario.
+
+### 8. Criterios de aceptación
+
+El proyecto se considera funcional cuando:
+
+- La página principal carga correctamente.
+- Los lugares aparecen con su información.
+- El buscador encuentra coincidencias.
+- Los filtros muestran las categorías.
+- El mapa permite localizar lugares.
+- La galería muestra y amplía fotografías.
+- La sección Historia presenta información.
+- Los planes recomendados son visibles.
+- Los enlaces externos funcionan.
+- La interfaz se adapta a celulares.
+- La navegación entre secciones funciona.
+
+### 9. Verificación del sistema
+
+Las pruebas funcionales y sus resultados
+se encuentran documentados en PRUEBAS.md.
+
+La arquitectura y la organización de los
+componentes se describen en ARQUITECTURA.md.
