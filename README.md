@@ -32,3 +32,9 @@ La base SQLite original se conserva para el componente de persistencia POO, pero
 
 Fuentes: Universidad Distrital (urbanización 1983); Secretaría Distrital de Ambiente (humedal Juan Amarillo);
 Jardín Botánico (arbolado del sector); Secretaría de Cultura (leyenda de la Bruja del Cortijo).
+
+
+## Servicios del diagrama MiBarrio
+La sección **Servicios** incorpora las 11 consultas del diagrama de casos de uso.
+Las consultas de transporte, veterinarias, policía, deporte, comida y zonas verdes abren búsquedas externas de Google Maps; las de catastro y polígonos abren Mapas Bogotá; movilidad, robos y cámaras enlazan a portales institucionales.
+**Alcance:** no existe integración en tiempo real ni se almacenan reportes de delitos, polígonos propios o ubicaciones de cámaras. Las búsquedas externas requieren internet y pueden devolver resultados fuera del barrio.

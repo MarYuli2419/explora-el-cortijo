@@ -1,0 +1,13 @@
+.servicios-section{background:#f2f8f5}
+.servicios-filtros{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:24px 0}
+.servicios-filtros input,.servicios-filtros select{min-width:210px;flex:1;border:1px solid #c8d9d0;border-radius:12px;padding:13px 15px;background:white;color:#193b35;font:inherit}
+.servicios-filtros span{color:#47635a;font-size:14px}
+.servicios-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:18px}
+.servicio-card{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:24px;border-radius:18px;background:white;border:1px solid #dfece5;box-shadow:0 6px 24px #183d2610}
+.servicio-icono{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:#e5f6ed;font-size:25px}
+.servicio-card small{color:#367c5e;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.servicio-card h3{font-size:19px;margin:0;color:#183b32}
+.servicio-card p{margin:0 0 10px;color:#52645e;line-height:1.6;flex:1}
+.servicio-card a{display:inline-block;border-radius:10px;padding:10px 14px;background:#165d49;color:#fff;text-decoration:none;font-weight:700;font-size:14px}
+.servicio-card a:hover,.servicio-card a:focus-visible{background:#0b3e30}
+.servicios-nota{margin-top:20px;font-size:13px;color:#53665f;line-height:1.6}
